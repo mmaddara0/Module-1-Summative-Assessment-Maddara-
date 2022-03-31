@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="admin_courses.css">
+    <title>Malayan Colleges Mindanao Student Information System</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Administrator</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="admin.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_students.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Students</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="home-content">
+          <div class="heading">Students</div>
+          <div class="subheading">Student List</div>
+          <div id=wrapper>
+            <div>
+              <label><h4>Search By Course</h4></title>
+                <select type="text" id="course" style="width:20%">
+                  <option value="BS-CpE">BS-CpE</option>
+                  <option value="BS-ME">BS-ME</option>
+                  <option value="BS-ECE">BS-ECE</option>
+                </select>
+                <button class="archive" id=show_button onclick="show_table()"><i class="bx bx-search-alt-2 icon"></i></button>
+                <button class="archive" id=show_button onclick="show_add()"><i class="bx bx-user-plus icon"></i></button>
+            </div>
+          <br>
+          <table id="data_table" class="data_tables">
+            <tr>
+              <th style="width:200px;">Full Name</th>
+              <th style="width:180px;">Student Number</th>
+              <th style="width:100px;">Program</th>
+              <th style="width:30px;">Gender</th>
+              <th style="width:150px;">Nationality</th>
+              <th style="width:180px;">Email Address</th>
+              <th style="width:200px;">Contact Number</th>
+              <th style="width:100px;">Birthdate</th>
+              <th style="width:200px;">Home Address</th>
+              <th style="width:100px;">Operations</th>
+            </tr>
+            <tr id="row1">
+              <td id="name_row1">Maddara, Marlon V. </td>
+              <td id="student_row1">2019122907</td>
+              <td id="program_row1">BS-CpE</td>
+              <td id="gender_row1">Male</td>
+              <td id="nat_row1">Filipino</td>
+              <td id="email_row1">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row1">09123456789</td>
+              <td id="birth_row1">2000-08-31</td>
+              <td id="home_row1">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button1 onclick="edit_row('1')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button1 onclick="save_row('1')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button1 onclick="delete_row('1')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row2">
+              <td id="name_row2">Maddara, Marlon V. </td>
+              <td id="student_row2">2019122907</td>
+              <td id="program_row2">BS-CpE</td>
+              <td id="gender_row2">Male</td>
+              <td id="nat_row2">Filipino</td>
+              <td id="email_row2">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row2">09123456789</td>
+              <td id="birth_row2">2000-08-31</td>
+              <td id="home_row2">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button2 onclick="edit_row('2')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button2 onclick="save_row('2')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button2 onclick="delete_row('2')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3">
+              <td id="name_row3">Maddara, Marlon V. </td>
+              <td id="student_row3">2019122907</td>
+              <td id="program_row3">BS-CpE</td>
+              <td id="gender_row3">Male</td>
+              <td id="nat_row3">Filipino</td>
+              <td id="email_row3">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row3">09123456789</td>
+              <td id="birth_row3">2000-08-31</td>
+              <td id="home_row3">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button3 onclick="delete_row('3')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row4">
+              <td id="name_row4">Maddara, Marlon V. </td>
+              <td id="student_row4">2019122907</td>
+              <td id="program_row4">BS-CpE</td>
+              <td id="gender_row4">Male</td>
+              <td id="nat_row4">Filipino</td>
+              <td id="email_row4">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row4">09123456789</td>
+              <td id="birth_row4">2000-08-31</td>
+              <td id="home_row4">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button4 onclick="edit_row('4')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button4 onclick="save_row('4')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button4 onclick="delete_row('4')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row5">
+              <td id="name_row5">Maddara, Marlon V. </td>
+              <td id="student_row5">2019122907</td>
+              <td id="program_row5">BS-CpE</td>
+              <td id="gender_row5">Male</td>
+              <td id="nat_row5">Filipino</td>
+              <td id="email_row5">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row5">09123456789</td>
+              <td id="birth_row5">2000-08-31</td>
+              <td id="home_row5">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button5 onclick="edit_row('5')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button5 onclick="save_row('5')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button5 onclick="delete_row('5')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row6">
+              <td id="name_row6">Maddara, Marlon V. </td>
+              <td id="student_row6">2019122907</td>
+              <td id="program_row6">BS-CpE</td>
+              <td id="gender_row6">Male</td>
+              <td id="nat_row6">Filipino</td>
+              <td id="email_row6">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row6">09123456789</td>
+              <td id="birth_row6">2000-08-31</td>
+              <td id="home_row6">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button6 onclick="edit_row('6')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button6 onclick="save_row('6')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button6 onclick="delete_row('6')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+          </table>
+          <table id="data_table3" class="data_tables" style="display:none">
+            <tr>
+              <th style="width:200px;">Full Name</th>
+              <th style="width:180px;">Student Number</th>
+              <th style="width:100px;">Program</th>
+              <th style="width:30px;">Gender</th>
+              <th style="width:150px;">Nationality</th>
+              <th style="width:180px;">Email Address</th>
+              <th style="width:200px;">Contact Number</th>
+              <th style="width:100px;">Birthdate</th>
+              <th style="width:200px;">Home Address</th>
+              <th style="width:100px;">Operations</th>
+            </tr>
+            <tr id="row1">
+              <td id="name_row1">Maddara, Marlon V. </td>
+              <td id="student_row1">2019122907</td>
+              <td id="program_row1">BS-ME</td>
+              <td id="gender_row1">Male</td>
+              <td id="nat_row1">Filipino</td>
+              <td id="email_row1">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row1">09123456789</td>
+              <td id="birth_row1">2000-08-31</td>
+              <td id="home_row1">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button1 onclick="edit_row('1')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button1 onclick="save_row('1')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button1 onclick="delete_row('1')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row2">
+              <td id="name_row2">Maddara, Marlon V. </td>
+              <td id="student_row2">2019122907</td>
+              <td id="program_row2">BS-ME</td>
+              <td id="gender_row2">Male</td>
+              <td id="nat_row2">Filipino</td>
+              <td id="email_row2">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row2">09123456789</td>
+              <td id="birth_row2">2000-08-31</td>
+              <td id="home_row2">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button2 onclick="edit_row('2')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button2 onclick="save_row('2')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button2 onclick="delete_row('2')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3">
+              <td id="name_row3">Maddara, Marlon V. </td>
+              <td id="student_row3">2019122907</td>
+              <td id="program_row3">BS-ME</td>
+              <td id="gender_row3">Male</td>
+              <td id="nat_row3">Filipino</td>
+              <td id="email_row3">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row3">09123456789</td>
+              <td id="birth_row3">2000-08-31</td>
+              <td id="home_row3">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button3 onclick="delete_row('3')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3">
+              <td id="name_row3">Maddara, Marlon V. </td>
+              <td id="student_row3">2019122907</td>
+              <td id="program_row3">BS-ME</td>
+              <td id="gender_row3">Male</td>
+              <td id="nat_row3">Filipino</td>
+              <td id="email_row3">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row3">09123456789</td>
+              <td id="birth_row3">2000-08-31</td>
+              <td id="home_row3">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button3 onclick="delete_row('3')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+          </table>
+          <table id="data_table2" class="data_tables" style="display:none">
+            <tr>
+              <th style="width:200px;">Full Name</th>
+              <th style="width:180px;">Student Number</th>
+              <th style="width:100px;">Program</th>
+              <th style="width:30px;">Gender</th>
+              <th style="width:150px;">Nationality</th>
+              <th style="width:180px;">Email Address</th>
+              <th style="width:200px;">Contact Number</th>
+              <th style="width:100px;">Birthdate</th>
+              <th style="width:200px;">Home Address</th>
+              <th style="width:100px;">Operations</th>
+            </tr>
+            <tr id="row1">
+              <td id="name_row1">Maddara, Marlon V. </td>
+              <td id="student_row1">2019122907</td>
+              <td id="program_row1">BS-ECE</td>
+              <td id="gender_row1">Male</td>
+              <td id="nat_row1">Filipino</td>
+              <td id="email_row1">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row1">09123456789</td>
+              <td id="birth_row1">2000-08-31</td>
+              <td id="home_row1">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button1 onclick="edit_row('1')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button1 onclick="save_row('1')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button1 onclick="delete_row('1')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row2">
+              <td id="name_row2">Maddara, Marlon V. </td>
+              <td id="student_row2">2019122907</td>
+              <td id="program_row2">BS-ECE</td>
+              <td id="gender_row2">Male</td>
+              <td id="nat_row2">Filipino</td>
+              <td id="email_row2">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row2">09123456789</td>
+              <td id="birth_row2">2000-08-31</td>
+              <td id="home_row2">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button2 onclick="edit_row('2')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button2 onclick="save_row('2')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button2 onclick="delete_row('2')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3">
+              <td id="name_row3">Maddara, Marlon V. </td>
+              <td id="student_row3">2019122907</td>
+              <td id="program_row3">BS-ECE</td>
+              <td id="gender_row3">Male</td>
+              <td id="nat_row3">Filipino</td>
+              <td id="email_row3">mmaddara@mcm.edu.ph</td>
+              <td id="cont_row3">09123456789</td>
+              <td id="birth_row3">2000-08-31</td>
+              <td id="home_row3">Tacurong City</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button3 onclick="delete_row('3')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        </div>
+          <div class="subheading" style="display:none" id="tit">Add Student</div>
+            <div id="wrapper2" style="display:none">
+            <div class="top-sales box">
+              <div class="title">New Student</div>
+              <form autocomplete="off">
+              <div>
+                <label><h4 id="name">Full Name*</h4></title>
+                  <input type="text" id="new_name" placeholder="Enter Full Name" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4 id="stud">Student ID*</h4></title>
+                  <input type="text" id="new_student" maxlength="10" placeholder="Enter Student ID" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4>Program</h4></title>
+                  <select type="text" id="new_program" style="width:100%">
+                    <option value="" selected disabled hidden>Select Program</option>
+                    <option value="BS-CpE">BS-CpE</option>
+                    <option value="BS-ECE">BS-ECE</option>
+                    <option value="BS-ME">BS-ME</option>
+                    <option value="BS-CE">BS-CE</option>
+                  </select>
+              </div>
+              <br>
+              <div>
+                <label><h4>Gender*</h4></title>
+                  <select type="text" id="new_gender" style="width:100%">
+                    <option value="" selected disabled hidden>Select Gender</option>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
+                  </select>
+              </div>
+              <br>
+              <div>
+                <label><h4 id="nat">Nationality*</h4></title>
+                <input type="text" id="new_nat" placeholder="Enter Nationality" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4 id="email">Email Address*</h4></title>
+                <input type="text" id="new_email" placeholder="Enter Email Address" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4 id="cont">Contact Number*</h4></title>
+                <input type="text" id="new_contact" maxlength="11" placeholder="Contact Number" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4>Birth Date*</h4></title>
+                <input type="date" id="new_birth" style="width:100%">
+              </div>
+              <br>
+              <div>
+                <label><h4>Home Address*</h4></title>
+                <input type="text" id="new_home" placeholder="Enter Home Address" style="width:100%">
+              </div>
+              <br>
+            </form>
+            <button class="add"  onclick="validate();"><i class="bx bx-plus-circle icon"></i></button>
+            </div>
+          </div>
+      </main>
+    </section>
+    <script src="admin_students.js"></script>
+</body>
+</html>

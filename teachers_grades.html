@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teachers_grades.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao</title>
+</head>
+<body onload="ready()">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Teacher</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="teachers.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="teachers_courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="teachers_grades.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Grades</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="teachers_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="teachers_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="teachers_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="heading">Grades</div>
+        <div class="home-content">
+          <div class="subheading">Gradebook</div>
+          <div id=wrapper>
+            <div>
+              <label><h4>Search Course</h4></title>
+                <select type="text" id="course" style="width:20%">
+                  <option value="Software Design">Software Design</option>
+                  <option value="Software Design (Laboratory)">Software Design (Laboratory)</option>
+                  <option value="Numerical">Numerical Methods</option>
+                  <option value="Operating Systems">Operating Systems</option>
+                </select>
+                <select type="text" id="module" style="width:5%">
+                  <option value="1">MO1</option>
+                  <option value="2">MO2</option>
+                  <option value="3">MO3</option>
+                  <option value="Final">Final</option>
+                </select>
+                <button class="archive" id=show_button onclick="show_table()"><i class="bx bx-search-alt-2 icon"></i></button>
+            </div>
+          <br>
+          <table id="data_table" class="data_tables" style="display:table">
+            <caption class="title" style="text-align:left">Software Design</caption>
+            <tr>
+              <th>Full Name</th>
+              <th>Student Number</th>
+              <th>OT1</th>
+              <th>OT2</th>
+              <th>OT3</th>
+              <th>Lecture Exam</th>
+              <th>Final Grade</th>
+              <th>Operations</th>
+            </tr>
+            <tr id="row1" class="fields">
+              <td id="name_row1">Maddara, Marlon V.</td>
+              <td id="student_row1">2019122907</td>
+              <td id="ot1_row1">90</td>
+              <td id="ot2_row1">95</td>
+              <td id="ot3_row1">100</td>
+              <td id="le_row1">89</td>
+              <td id="fin_row1">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button1 onclick="edit_row('1')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button1 onclick="save_row('1')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row2" class="fields">
+              <td id="name_row2">Maddara, Marlon V.</td>
+              <td id="student_row2">2019122907</td>
+              <td id="ot1_row2">90</td>
+              <td id="ot2_row2">95</td>
+              <td id="ot3_row2">100</td>
+              <td id="le_row2">89</td>
+              <td id="fin_row2">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button2 onclick="edit_row('2')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button2 onclick="save_row('2')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3" class="fields">
+              <td id="name_row3">Maddara, Marlon V.</td>
+              <td id="student_row3">2019122907</td>
+              <td id="ot1_row3">90</td>
+              <td id="ot2_row3">95</td>
+              <td id="ot3_row3">100</td>
+              <td id="le_row3">89</td>
+              <td id="fin_row3">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row4" class="fields">
+              <td id="name_row4">Maddara, Marlon V.</td>
+              <td id="student_row4">2019122907</td>
+              <td id="ot1_row4">90</td>
+              <td id="ot2_row4">95</td>
+              <td id="ot3_row4">100</td>
+              <td id="le_row4">89</td>
+              <td id="fin_row4">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button4 onclick="edit_row('4')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button4 onclick="save_row('4')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row5" class="fields">
+              <td id="name_row5">Maddara, Marlon V.</td>
+              <td id="student_row5">2019122907</td>
+              <td id="ot1_row5">90</td>
+              <td id="ot2_row5">95</td>
+              <td id="ot3_row5">100</td>
+              <td id="le_row5">89</td>
+              <td id="fin_row5">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button5 onclick="edit_row('5')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button5 onclick="save_row('5')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row6" class="fields">
+              <td id="name_row6">Maddara, Marlon V.</td>
+              <td id="student_row6">2019122907</td>
+              <td id="ot1_row6">90</td>
+              <td id="ot2_row6">95</td>
+              <td id="ot3_row6">100</td>
+              <td id="le_row6">89</td>
+              <td id="fin_row6">1.50</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button6 onclick="edit_row('6')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button6 onclick="save_row('6')"><i class="bx bx-save icon"></i></button>
+              </td>
+            </tr>
+          </table>
+          <table id="data_table2" class="data_tables" style="display:none">
+           <caption class="title" style="text-align:left">Software Design(Laboratory)</caption>
+           <tr>
+             <th>Full Name</th>
+             <th>Student Number</th>
+             <th>OT1</th>
+             <th>OT2</th>
+             <th>OT3</th>
+             <th>Lecture Exam</th>
+             <th>Final Grade</th>
+             <th>Operations</th>
+           </tr>
+           <tr id="row7" class="fields">
+             <td id="name_row7">Maddara, Marlon V.</td>
+             <td id="student_row7">2019122907</td>
+             <td id="ot1_row7">90</td>
+             <td id="ot2_row7">95</td>
+             <td id="ot3_row7">100</td>
+             <td id="le_row7">89</td>
+             <td id="fin_row7">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button7 onclick="edit_row('7')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button7 onclick="save_row('7')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+           <tr id="row8" class="fields">
+             <td id="name_row8">Maddara, Marlon V.</td>
+             <td id="student_row8">2019122907</td>
+             <td id="ot1_row8">90</td>
+             <td id="ot2_row8">95</td>
+             <td id="ot3_row8">100</td>
+             <td id="le_row8">89</td>
+             <td id="fin_row8">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button8 onclick="edit_row('8')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button8 onclick="save_row('8')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+           <tr id="row9" class="fields">
+             <td id="name_row9">Maddara, Marlon V.</td>
+             <td id="student_row9">2019122907</td>
+             <td id="ot1_row9">90</td>
+             <td id="ot2_row9">95</td>
+             <td id="ot3_row9">100</td>
+             <td id="le_row9">89</td>
+             <td id="fin_row9">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button9 onclick="edit_row('9')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button9 onclick="save_row('9')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+           <tr id="row10" class="fields">
+             <td id="name_row10">Maddara, Marlon V.</td>
+             <td id="student_row10">2019122907</td>
+             <td id="ot1_row10">90</td>
+             <td id="ot2_row10">95</td>
+             <td id="ot3_row10">100</td>
+             <td id="le_row10">89</td>
+             <td id="fin_row10">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button10 onclick="edit_row('10')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button10 onclick="save_row('10')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+           <tr id="row11" class="fields">
+             <td id="name_row11">Maddara, Marlon V.</td>
+             <td id="student_row11">2019122907</td>
+             <td id="ot1_row11">90</td>
+             <td id="ot2_row11">95</td>
+             <td id="ot3_row11">100</td>
+             <td id="le_row11">89</td>
+             <td id="fin_row11">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button11 onclick="edit_row('11')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button11 onclick="save_row('11')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+           <tr id="row12" class="fields">
+             <td id="name_row12">Maddara, Marlon V.</td>
+             <td id="student_row12">2019122907</td>
+             <td id="ot1_row12">90</td>
+             <td id="ot2_row12">95</td>
+             <td id="ot3_row12">100</td>
+             <td id="le_row12">89</td>
+             <td id="fin_row12">1.50</td>
+             <td style="text-align:center;">
+               <button class="edit" id=edit_button12 onclick="edit_row('12')"><i class="bx bx-pencil icon"></i></button>
+               <button class="save" id=save_button12 onclick="save_row('12')"><i class="bx bx-save icon"></i></button>
+             </td>
+           </tr>
+         </table>
+         <table id="data_table3" class="data_tables" style="display:none">
+          <caption class="title" style="text-align:left">Numerical Methods</caption>
+          <tr>
+            <th>Full Name</th>
+            <th>Student Number</th>
+            <th>OT1</th>
+            <th>OT2</th>
+            <th>OT3</th>
+            <th>Lecture Exam</th>
+            <th>Final Grade</th>
+            <th>Operations</th>
+          </tr>
+          <tr id="row13" class="fields">
+            <td id="name_row13">Maddara, Marlon V.</td>
+            <td id="student_row13">2019122907</td>
+            <td id="ot1_row13">90</td>
+            <td id="ot2_row13">95</td>
+            <td id="ot3_row13">100</td>
+            <td id="le_row13">89</td>
+            <td id="fin_row13">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button13 onclick="edit_row('13')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button13 onclick="save_row('13')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+          <tr id="row14" class="fields">
+            <td id="name_row14">Maddara, Marlon V.</td>
+            <td id="student_row14">2019122907</td>
+            <td id="ot1_row14">90</td>
+            <td id="ot2_row14">95</td>
+            <td id="ot3_row14">100</td>
+            <td id="le_row14">89</td>
+            <td id="fin_row14">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button14 onclick="edit_row('14')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button14 onclick="save_row('14')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+          <tr id="row15" class="fields">
+            <td id="name_row15">Maddara, Marlon V.</td>
+            <td id="student_row15">2019122907</td>
+            <td id="ot1_row15">90</td>
+            <td id="ot2_row15">95</td>
+            <td id="ot3_row15">100</td>
+            <td id="le_row15">89</td>
+            <td id="fin_row15">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button15 onclick="edit_row('15')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button15 onclick="save_row('15')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+          <tr id="row16" class="fields">
+            <td id="name_row16">Maddara, Marlon V.</td>
+            <td id="student_row16">2019122907</td>
+            <td id="ot1_row16">90</td>
+            <td id="ot2_row16">95</td>
+            <td id="ot3_row16">100</td>
+            <td id="le_row16">89</td>
+            <td id="fin_row16">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button16 onclick="edit_row('16')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button16 onclick="save_row('16')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+          <tr id="row17" class="fields">
+            <td id="name_row17">Maddara, Marlon V.</td>
+            <td id="student_row17">2019122907</td>
+            <td id="ot1_row17">90</td>
+            <td id="ot2_row17">95</td>
+            <td id="ot3_row17">100</td>
+            <td id="le_row17">89</td>
+            <td id="fin_row17">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button17 onclick="edit_row('17')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button17 onclick="save_row('17')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+          <tr id="row18" class="fields">
+            <td id="name_row18">Maddara, Marlon V.</td>
+            <td id="student_row18">2019122907</td>
+            <td id="ot1_row18">90</td>
+            <td id="ot2_row18">95</td>
+            <td id="ot3_row18">100</td>
+            <td id="le_row18">89</td>
+            <td id="fin_row18">1.50</td>
+            <td style="text-align:center;">
+              <button class="edit" id=edit_button12 onclick="edit_row('18')"><i class="bx bx-pencil icon"></i></button>
+              <button class="save" id=save_button12 onclick="save_row('18')"><i class="bx bx-save icon"></i></button>
+            </td>
+          </tr>
+        </table>
+        <table id="data_table4" class="data_tables" style="display:none">
+         <caption class="title" style="text-align:left">Operating Systems</caption>
+         <tr>
+           <th>Full Name</th>
+           <th>Student Number</th>
+           <th>OT1</th>
+           <th>OT2</th>
+           <th>OT3</th>
+           <th>Lecture Exam</th>
+           <th>Final Grade</th>
+           <th>Operations</th>
+         </tr>
+         <tr id="row19" class="fields">
+           <td id="name_row19">Maddara, Marlon V.</td>
+           <td id="student_row19">2019122907</td>
+           <td id="ot1_row19">90</td>
+           <td id="ot2_row19">95</td>
+           <td id="ot3_row19">100</td>
+           <td id="le_row19">89</td>
+           <td id="fin_row19">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button19 onclick="edit_row('19')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button19 onclick="save_row('19')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+         <tr id="row20" class="fields">
+           <td id="name_row20">Maddara, Marlon V.</td>
+           <td id="student_row20">2019122907</td>
+           <td id="ot1_row20">90</td>
+           <td id="ot2_row20">95</td>
+           <td id="ot3_row20">100</td>
+           <td id="le_row20">89</td>
+           <td id="fin_row20">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button20 onclick="edit_row('20')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button20 onclick="save_row('20')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+         <tr id="row21" class="fields">
+           <td id="name_row21">Maddara, Marlon V.</td>
+           <td id="student_row21">2019122907</td>
+           <td id="ot1_row21">90</td>
+           <td id="ot2_row21">95</td>
+           <td id="ot3_row21">100</td>
+           <td id="le_row21">89</td>
+           <td id="fin_row21">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button21 onclick="edit_row('21')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button21 onclick="save_row('21')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+         <tr id="row22" class="fields">
+           <td id="name_row22">Maddara, Marlon V.</td>
+           <td id="student_row22">2019122907</td>
+           <td id="ot1_row22">90</td>
+           <td id="ot2_row22">95</td>
+           <td id="ot3_row22">100</td>
+           <td id="le_row22">89</td>
+           <td id="fin_row22">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button22 onclick="edit_row('22')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button22 onclick="save_row('22')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+         <tr id="row23" class="fields">
+           <td id="name_row23">Maddara, Marlon V.</td>
+           <td id="student_row23">2019122907</td>
+           <td id="ot1_row23">90</td>
+           <td id="ot2_row23">95</td>
+           <td id="ot3_row23">100</td>
+           <td id="le_row23">89</td>
+           <td id="fin_row23">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button23 onclick="edit_row('23')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button23 onclick="save_row('23')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+         <tr id="row24" class="fields">
+           <td id="name_row24">Maddara, Marlon V.</td>
+           <td id="student_row24">2019122907</td>
+           <td id="ot1_row24">90</td>
+           <td id="ot2_row24">95</td>
+           <td id="ot3_row24">100</td>
+           <td id="le_row24">89</td>
+           <td id="fin_row24">1.50</td>
+           <td style="text-align:center;">
+             <button class="edit" id=edit_button12 onclick="edit_row('24')"><i class="bx bx-pencil icon"></i></button>
+             <button class="save" id=save_button12 onclick="save_row('24')"><i class="bx bx-save icon"></i></button>
+           </td>
+         </tr>
+       </table>
+      </div>
+      </main>
+    </section>
+    <script src="teachers_grades.js"></script>
+</body>
+</html>

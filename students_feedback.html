@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="students_feedback.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Student</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="students.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="grades.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Grades</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_reports.html">
+                            <i class='bx bx-clipboard icon' ></i>
+                            <span class="text nav-text">Records</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_feedback.html">
+                            <i class='bx bx-message-rounded-detail icon' ></i>
+                            <span class="text nav-text">Feedback</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="heading">Course</div>
+        <div class="home-content">
+          <div class="subheading">Course Feedback</div>
+          <div class="sales-boxes">
+            <div class="recent-sales box">
+              <div><h2>Help us improve by leaving some feedback!</h2><br></div>
+              <form autocomplete="off">
+              <div>
+                <label><h4>Full Name</h4></title>
+                  <input type="text" id="new_name" placeholder="Enter Full Name" style="width:100%;">
+              </div>
+              <br>
+              <div>
+                <label><h4>Course Title is required</h4></title>
+                  <select type="text" id="new_program" value="Select Course Title" style="width:100%;">
+                    <option value="" selected disabled hidden>Select Course Title</option>
+                    <option value="Software Design">Software Design</option>
+                    <option value="Software Design (Laboratory)">Software Design (Laboratory)</option>
+                    <option value="Numerical Methods">Numerical Methods</option>
+                    <option value="Operating Systems">Operating Systems</option>
+                  </select>
+              </div>
+              <br>
+              <div>
+                <label><h4>Comments & Suggestions</h4></title>
+                <textarea type="text" id="new_content" placeholder="Enter Feedback" style="width:100%; height:200px;"></textarea>
+              </div>
+              <br>
+            </form>
+            <button class="add"  onclick="validate()"><i class="bx bx-plus-circle icon"></i></button>
+            </div>
+            <div class="top-sales box">
+              <br>
+              <img id="cover" src="image/cover.jpg">
+              <div class="text">For questions and concerns, kindly contact our different offices and departments through their official contact details below.</div><div class="extra">✓ admissions@mcm.edu.ph<br>✓ 0918 918 1626</div>
+            </div>
+          </div>
+      </main>
+    </section>
+    <script src="students_feedback.js"></script>
+</body>
+</html>

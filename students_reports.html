@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="students_reports.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao</title>
+</head>
+<body onload="ready()">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Student</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="students.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="grades.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Grades</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_reports.html">
+                            <i class='bx bx-clipboard icon' ></i>
+                            <span class="text nav-text">Records</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_feedback.html">
+                            <i class='bx bx-message-rounded-detail icon' ></i>
+                            <span class="text nav-text">Feedback</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="heading">Financial Records</div>
+        <div class="home-content">
+          <div class="subheading">Student Records</div>
+          <div id=wrapper>
+            <div>
+              <label class="text">Search Date<br>
+                <select type="text" id="date" style="width:20%">
+                  <option value="3/11/2022">3/11/2022</option>
+                  <option value="1/26/2022">1/26/2022</option>
+                  <option value="11/30/2021">11/30/2021</option>
+                </select>
+              </label>
+              <button class="archive" id=show_button onclick="show_table()"><i class="bx bx-search-alt-2 icon"></i></button>
+              <br><br>
+              <label class="text">Account Name: <i>Maddara, Marlon V.</i><br></label>
+              <label class="text">Account Number: <i>2019122907</i><br></label>
+              <label class="text">Program: <i>BS-CpE</i></label>
+            </div>
+          <br>
+          <table id="data_table">
+            <colgroup>
+            <col style="width: 191px">
+            <col style="width: 230px">
+            <col style="width: 351px">
+            <col style="width: 251px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Charge #</th>
+                <th>Coverage/Particulars</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3/11/2022</td>
+                <td>SOA.220311.1695</td>
+                <td>3rd Term A.Y. 2021 - 2022</td>
+                <td>₱ 26,100.00</td>
+              </tr>
+              <tr>
+                <td>3/11/2022</td>
+                <td>BIL.220311.1445</td>
+                <td>DLM Fee For 3T 21-22</td>
+                <td>₱ 1,400.00</td>
+              </tr>
+              <tr>
+                <td>3/11/2022</td>
+                <td>BIL.220311.2407</td>
+                <td>Coursera (Internal) Course Integration</td>
+                <td>₱ 3,300.00</td>
+              </tr>
+              <tr>
+                <td>3/11/2022</td>
+                <td>BIL.220311.2155</td>
+                <td>LinkedIn Learning Integration</td>
+                <td>₱ 400.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="data_table2" style="display:none">
+            <colgroup>
+            <col style="width: 191px">
+            <col style="width: 230px">
+            <col style="width: 351px">
+            <col style="width: 251px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Charge #</th>
+                <th>Coverage/Particulars</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1/26/2022</td>
+                <td>SOA.220126.1789</td>
+                <td>2nd Term A.Y. 2021 - 2022</td>
+                <td>₱ 25,585.00</td>
+              </tr>
+              <tr>
+                <td>1/26/2022</td>
+                <td>BIL.211130.0941</td>
+                <td>DLM Fee For 2T 21-22</td>
+                <td>₱ 1,400.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <table id="data_table3" style="display:none">
+            <colgroup>
+            <col style="width: 191px">
+            <col style="width: 229px">
+            <col style="width: 351px">
+            <col style="width: 251px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Charge #</th>
+                <th>Coverage/Particulars</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>11/30/2021</td>
+                <td>SOA.211130.2269</td>
+                <td>2nd Term A.Y. 2021 - 2022</td>
+                <td>₱ 25,585.00</td>
+              </tr>
+              <tr>
+                <td>11/30/2021</td>
+                <td>BIL.211130.0941</td>
+                <td>DLM Fee For 2T 21-22</td>
+                <td>₱ 1,400.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </section>
+    <script src="students_reports.js"></script>
+</body>
+</html>

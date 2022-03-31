@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grades.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao Student Information System</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Administrator</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="students.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="grades.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Grades</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_reports.html">
+                            <i class='bx bx-clipboard icon' ></i>
+                            <span class="text nav-text">Records</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_feedback.html">
+                            <i class='bx bx-message-rounded-detail icon' ></i>
+                            <span class="text nav-text">Feedback</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="students_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <div class="text" id="counter" style="display:none">5</div>
+      <main>
+        <div class="heading">Grades</div>
+        <div class="home-content">
+          <div class="subheading">Courses</div>
+          <div class="overview-boxes" id="overview">
+            <div class="box" id="cloner1" onclick="location.href='students_grades.html'">
+              <div class="right-side">
+                <div class="box-topic" id="topic1">CPE107.A361</div><br>
+                <div class="number" id="number1">Software Design</div>
+                <br>
+                <img src="image/uno.png">
+              </div>
+            </div>
+            <div class="box" id="cloner2">
+              <div class="right-side">
+                <div class="box-topic" id="topic2">CPE107L.A361</div><br>
+                <div class="number" id="number2">Software Design (Lab)</div>
+                <br>
+                <img src="image/uno.png">
+              </div>
+            </div>
+            <div class="box" id="cloner3">
+              <div class="right-side">
+                <div class="box-topic" id="topic3">MATH161.A281</div><br>
+                <div class="number" id="number3">Numerical Methods</div>
+                <br>
+                <img src="image/uno.png">
+              </div>
+            </div>
+            <div class="box" id="cloner4">
+              <div class="right-side">
+                <div class="box-topic" id="topic4">CPE151.A361</div><br>
+                <div class="number" id="number4">Operating Sytems</div><br>
+                <img src="image/uno.png">
+              </div>
+            </div>
+            <div class="box" id="cloner5">
+              <div class="right-side">
+                <div class="box-topic" id="topic5">CPE151L.A361</div><br>
+                <div class="number" id="number5">Operating Sytems (Lab)</div>
+                <br>
+                <img src="image/uno.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
+    </section>
+    <script src="admin_courses.js"></script>
+  </body>
+</html>

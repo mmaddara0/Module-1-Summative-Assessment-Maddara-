@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_courses.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao Student Information System</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Administrator</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="admin.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_students.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Students</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="heading">Courses</div>
+        <div class="home-content">
+          <div class="subheading">Course List View</div>
+          <div id=wrapper>
+          <table id="data_table">
+            <tr>
+              <th>Course Title</th>
+              <th>Category</th>
+              <th>Units</th>
+              <th>Date Updated</th>
+              <th>Status</th>
+              <th>Instructor</th>
+              <th>Operations</th>
+            </tr>
+            <tr id="row1">
+              <td id="name_row1">Software Design</td>
+              <td id="cat_row1">BS-CpE</td>
+              <td id="units_row1">3</td>
+              <td id="date_row1">26/3/2022</td>
+              <td id="stat_row1">Active</td>
+              <td id="inst_row1">John Paul Cruz</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button1 onclick="edit_row('1')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button1 onclick="save_row('1')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button1 onclick="delete_row('1')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row2">
+              <td id="name_row2">Software Design (Laboratory)</td>
+              <td id="cat_row2">BS-CpE</td>
+              <td id="units_row2">1</td>
+              <td id="date_row2">26/3/2022</td>
+              <td id="stat_row2">Active</td>
+              <td id="inst_row2">John Paul Cruz</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button2 onclick="edit_row('2')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button2 onclick="save_row('2')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button2 onclick="delete_row('2')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row3">
+              <td id="name_row3">Operating Systems</td>
+              <td id="cat_row3">BS-CpE</td>
+              <td id="units_row3">3</td>
+              <td id="date_row3">26/3/2022</td>
+              <td id="stat_row3">Active</td>
+              <td id="inst_row3">Emmy Grace Requillo</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button3 onclick="edit_row('3')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button3 onclick="save_row('3')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button3 onclick="delete_row('3')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row4">
+              <td id="name_row4">Operating Systems (Laboratory)</td>
+              <td id="cat_row4">BS-CpE</td>
+              <td id="units_row4">1</td>
+              <td id="date_row4">26/3/2022</td>
+              <td id="stat_row4">Active</td>
+              <td id="inst_row4">Emmy Grace Requillo</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button4 onclick="edit_row('4')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button4 onclick="save_row('4')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button4 onclick="delete_row('4')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row5">
+              <td id="name_row5">Methods of Research</td>
+              <td id="cat_row5">BS-CpE</td>
+              <td id="units_row5">2</td>
+              <td id="date_row5">26/3/2022</td>
+              <td id="stat_row5">Inactive</td>
+              <td id="inst_row5">John Paul Cruz</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button5 onclick="edit_row('5')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button5 onclick="save_row('5')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button5 onclick="delete_row('5')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+            <tr id="row6">
+              <td id="name_row6">Numerical Methods</td>
+              <td id="cat_row6">BS-CpE</td>
+              <td id="units_row6">3</td>
+              <td id="date_row6">26/3/2022</td>
+              <td id="stat_row6">Active</td>
+              <td id="inst_row6">Paul Emmanuel Empas</td>
+              <td style="text-align:center;">
+                <button class="edit" id=edit_button6 onclick="edit_row('6')"><i class="bx bx-pencil icon"></i></button>
+                <button class="save" id=save_button6 onclick="save_row('6')"><i class="bx bx-save icon"></i></button>
+                <button class="delete" id=delete_button6 onclick="delete_row('6')"><i class="bx bx-trash icon"></i></button>
+              </td>
+            </tr>
+          </table>
+        </div>
+          <div class="subheading">Add Course</div>
+            <div id=wrapper>
+            <div class="top-sales box">
+              <div class="title">New Course</div>
+                <form autocomplete="off">
+                  <div>
+                    <label><h4>Course Name*</h4></title>
+                      <input type="text" id="new_name" placeholder="Enter Course Name" style="width:100%">
+                  </div>
+                  <br>
+                  <div>
+                    <label><h4>Category*</h4></title>
+                      <select type="text" id="new_cat" style="width:100%">
+                        <option value="" selected disabled hidden>Select Category</option>
+                        <option value="BS-CpE">BS-CpE</option>
+                        <option value="BS-ECE">BS-ECE</option>
+                        <option value="BS-ME">BS-ME</option>
+                        <option value="BS-CE">BS-CE</option>
+                      </select>
+                  </div>
+                  <br>
+                  <div>
+                    <label><h4 id="units">Units*</h4></label>
+                      <input type="text" id="new_units" maxlength="1" placeholder="Enter Number of Units" style="width:100%">
+                  </div>
+                  <br>
+                  <div>
+                      <label><h4>Status*</h4></title>
+                        <select type="text" id="new_stat" style="width:100%">
+                          <option value="" selected disabled hidden>Select Status</option>
+                          <option value="Active">Active</option>
+                          <option value="Inactive">Inactive</option>
+                        </select>
+                  </div>
+                  <br>
+                  <div>
+                      <label><h4>Instructor*</h4></title>
+                        <select type="text" id="new_inst" style="width:100%">
+                          <option value="" selected disabled hidden>Select Instructor</option>
+                          <option value="John Paul Cruz">John Paul Cruz</option>
+                          <option value="Emmy Grace Requillo">Emmy Grace Requillo</option>
+                          <option value="Paul Emmanuel Empas">Paul Emmanuel Empas</option>
+                          <option value="Marites Tabanao">Marites Tabanao</option>
+                        </select>
+                  </div>
+                  <br>
+                </form>
+                <button class="add"  onclick="validate();"><i class="bx bx-plus-circle icon"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
+    </section>
+    <script src="admin_courses.js"></script>
+</body>
+</html>

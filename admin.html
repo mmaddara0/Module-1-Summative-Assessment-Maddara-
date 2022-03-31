@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_students.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Malayan Colleges Mindanao Student Information System</title>
+</head>
+<body onload="myFunction()">
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="image/logo.png" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">MCM-SIS</span>
+                    <span class="profession">Administrator</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="admin.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="courses.html">
+                            <i class='bx bx-book-alt icon' ></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_students.html">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Students</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_programs.html">
+                            <i class='bx bx-collection icon' ></i>
+                            <span class="text nav-text">Programs</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_faculty.html">
+                            <i class='bx bx-group icon' ></i>
+                            <span class="text nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="admin_about.html">
+                            <i class='bx bx-info-circle icon' ></i>
+                            <span class="text nav-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+      <main>
+        <div class="heading">Dashboard</div>
+        <div class="home-content">
+          <div class="subheading">Overview</div>
+          <div class="overview-boxes">
+            <div class="box">
+              <div class="right-side">
+                <div class="box-topic">Total Students</div>
+                <div class="number">256</div>
+              </div>
+              <i class='bx bx-user cart'></i>
+            </div>
+            <div class="box">
+              <div class="right-side">
+                <div class="box-topic">Total Teachers</div>
+                <div class="number">36</div>
+              </div>
+              <i class='bx bx-user cart two' ></i>
+            </div>
+            <div class="box">
+              <div class="right-side">
+                <div class="box-topic">Total Courses</div>
+                <div class="number">48</div>
+              </div>
+              <i class='bx bx-book-open cart three' ></i>
+            </div>
+            <div class="box">
+              <div class="right-side">
+                <div class="box-topic">Date Today</div>
+                <div class="number" id="date">26/03/22</div>
+              </div>
+              <i class='bx bx-calendar-week cart four'></i>
+            </div>
+          </div>
+          <div class="subheading">Announcements</div>
+          <div class="sales-boxes">
+            <div class="recent-sales box">
+              <div class="title" style="padding-bottom:20px">Top Announcements</div>
+              <div>
+                <table id="data_table">
+                  <tr class="row1">
+                    <td id="name_row1"><h3>Welcome to Malayan Colleges Mindanao!</h3></td>
+                    </tr>
+                    <tr class="row1">
+                      <td id="content_row1" style="width:100%;">Donec non ornare arcu. Proin felis purus, rutrum quis elit vehicula, convallis vulputate massa. Aenean nec purus nunc. In imperdiet eros vel rutrum rutrum. Maecenas nec enim sit amet neque blandit fringilla. Vestibulum ac tempus felis, eu malesuada est. Integer sit amet magna nec ex commodo molestie quis at ligula. Ut iaculis congue lacus a convallis. Praesent nec mauris vitae neque egestas ullamcorper. Mauris vel sapien egestas, lobortis magna a, pellentesque ligula. In lobortis convallis lectus, vitae euismod turpis fermentum vel. Sed ac nibh eros.</td>
+                      <td>
+                        <button class="delete" id=delete_button1 onclick="delete_row('1')"><i class="bx bx-trash icon"></i></button>
+                      </td>
+                    </tr>
+                    <tr class="row1">
+                      <td id="author_row1" style="width:100%;"><h4>Posted on 6/21/2021 22:4:3 by Administrator</h4></td>
+                    </tr>
+                  <tr class="row2">
+                    <td id="name_row2"><br><h3>Welcome to Malayan Colleges Mindanao!</h3></td>
+                    </tr>
+                    <tr class="row2">
+                      <td id="content_row2" style="width:100%;">Donec non ornare arcu. Proin felis purus, rutrum quis elit vehicula, convallis vulputate massa. Aenean nec purus nunc. In imperdiet eros vel rutrum rutrum. Maecenas nec enim sit amet neque blandit fringilla. Vestibulum ac tempus felis, eu malesuada est. Integer sit amet magna nec ex commodo molestie quis at ligula. Ut iaculis congue lacus a convallis. Praesent nec mauris vitae neque egestas ullamcorper. Mauris vel sapien egestas, lobortis magna a, pellentesque ligula. In lobortis convallis lectus, vitae euismod turpis fermentum vel. Sed ac nibh eros.</td>
+                      <td>
+                        <button class="delete" id=delete_button2 onclick="delete_row('2')"><i class="bx bx-trash icon"></i></button>
+                      </td>
+                    </tr>
+                    <tr class="row2">
+                      <td id="author_row2" style="width:100%;"><h4>Posted on 3/26/2022 19:3:36 by Administrator</h4><br></td>
+                    </tr>
+                </table>
+                <table id="data_table2">
+                </table>
+              </div>
+            </div>
+            <div class="top-sales box">
+              <div class="title">Create Announcement</div>
+              <br>
+                <form autocomplete="off">
+                  <div>
+                    <label><h4>Title*</h4></title>
+                      <input type="text" id="new_name" placeholder="Enter Title" style="width:100%">
+                  </div>
+                  <br>
+                  <div>
+                    <label><h4>Author*</h4></title>
+                      <input type="text" id="new_author" placeholder="Enter Author" style="width:100%">
+                  </div>
+                  <br>
+                  <div>
+                    <label><h4>Content*</h4></title>
+                      <textarea type="text" id="new_content" placeholder="Enter Content" style="width:100%; height:200px;"></textarea>
+                  </div>
+                  <br>
+                </form>
+                <button class="add"  onclick="validate();"><i class="bx bx-plus-circle icon"></i></button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
